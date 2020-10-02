@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click Me!!!</button>
+    <script src="./index.js" type="text/javascript"></script>
+    <script>
+        const btn = document.getElementById('btn');
+        const clickFxn = () => console.log('I just got clicked')
+        const throttledFxn = throttle(clickFxn, 1000)
+        btn.addEventListener('click', throttledFxn)
+    </script>
+</body>
+</html>
